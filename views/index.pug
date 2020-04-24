@@ -1,0 +1,18 @@
+html
+  head 
+    style
+      include ../style/home.css
+  body
+    div(style="width: 600px")
+      h3(style="text-align: center") Những quấn sách hay của tôi
+      ul 
+        each todo in todos
+          li(style="margin:0 0 10px") 
+            div
+              div= todo.stt + '. ' + todo.title+':'
+              div= todo.description
+            div
+              a(href="/delete/" + todo.id) Xóa sách
+              a(href="/update/" + todo.id) Sửa lại
+
+      a(href="/post") Thêm sách

@@ -1,0 +1,6 @@
+replace in package.json
+
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  }
